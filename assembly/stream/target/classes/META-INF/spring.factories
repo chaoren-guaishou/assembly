@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.assembly.stream.config.MyAutoConfiguration,\
+  com.assembly.stream.util.StreamUtil
