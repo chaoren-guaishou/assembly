@@ -20,7 +20,7 @@
 
     <!--子集-->
     <modules>
-        <module>stream</module>
+        <module>util</module>
     </modules>
 
     <!--依赖包版本控制-->
