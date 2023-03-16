@@ -1,4 +1,4 @@
-package com.assembly.utils;
+package com.assembly.utils.collections;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.ListUtil;
@@ -130,7 +130,7 @@ public class StreamUtil {
      * @param <T> 泛型T
      */
     public static <K, U, T> Map<K, U> toMap(List<T> list, Function<? super T, ? extends K> keyMapper,
-                                         Function<? super T, ? extends U> valueMapper) {
+                                            Function<? super T, ? extends U> valueMapper) {
         // 如果为空
         if (CollUtil.isEmpty(list)) {
             return MapUtil.newHashMap();
@@ -158,6 +158,21 @@ public class StreamUtil {
         return list
                 .stream()
                 .collect(Collectors.groupingBy(classifier));
+    }
+
+    /**
+     * 过滤统计
+     *
+     * @param list list
+     * @param predicate predicate
+     * @return long
+     * @param <T> 泛型T
+     */
+    public static <T> long filterCount(List<T> list, Predicate<? super T> predicate) {
+        return list
+                .stream()
+                .filter(predicate)
+                .count();
     }
 
 }
