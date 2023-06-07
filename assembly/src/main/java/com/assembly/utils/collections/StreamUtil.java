@@ -4,6 +4,8 @@ import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.ListUtil;
 import cn.hutool.core.map.MapUtil;
 import javafx.util.Pair;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.stream.Collectors;
  * @author DPJ
  * @since 2023-03-07
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class StreamUtil {
 
     /**

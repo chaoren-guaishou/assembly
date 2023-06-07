@@ -1,6 +1,7 @@
 package com.assembly.utils.trans;
 
 import cn.hutool.core.collection.ListUtil;
+import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
@@ -26,7 +27,7 @@ public class AdapterUntil {
      * @param <T> 类型
      */
     public static <T> List<T> jsonStrToList(String jsonStr, Class<T> tClass) {
-        return StrUtil.isNotBlank(jsonStr)
+        return CharSequenceUtil.isNotBlank(jsonStr)
                 ? JSONUtil.toList(jsonStr, tClass)
                 : ListUtil.empty();
     }
